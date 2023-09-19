@@ -19,8 +19,6 @@ import com.jobsite.oragejobsite.entity.User;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
 
-
-@CrossOrigin(origins="http://localhost:4200")
 @RestController
 public class EmployerController {
 	@Autowired

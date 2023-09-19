@@ -9,32 +9,33 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jobsite.oragejobsite.dao.ConatctDao;
-import com.jobsite.oragejobsite.entity.Contact;
-import com.jobsite.oragejobsite.entity.Employer;
+import com.jobsite.oragejobsite.dao.ResumeDao;
 import com.jobsite.oragejobsite.entity.PostJob;
-
+import com.jobsite.oragejobsite.entity.ResumeBuilder;
 
 @CrossOrigin(origins="http://localhost:4200")
 @RestController
-public class ContactController {
-	@Autowired
-	private ConatctDao cd;
+public class Resumecontroller {
 	
+	@Autowired
+	private ResumeDao rm;
 	
 	@CrossOrigin(origins="http://localhost:4200")
-	@PostMapping("/insertcontact")
-	public Contact insertcontact(@RequestBody Contact contact)
+	@PostMapping("/resumeinsert")
+	public ResumeBuilder resumeinsert(@RequestBody ResumeBuilder rmm)
 	{
-			return cd.save(contact);
+			return rm.save(rmm);
 		
 	}
 	
-	
-	
 	@CrossOrigin(origins="http://localhost:4200")
-	@GetMapping("/fetchcontact")
-	public List<Contact> fetchcontact(){
-		return cd.findAll();
+	@GetMapping("/fetchresumedetails")
+	public List<ResumeBuilder> fetchresumedetails(){
+		return rm.findAll();
 	}
+	
+	
+	
+	
+	
 }

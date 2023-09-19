@@ -10,8 +10,6 @@ public class ApplyJob {
 	 @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int juid;
 	private String juname;
-	private String jumail;
-	private String jucompny;
 	private String juresume;
 	private String jurelocation;
 	private String jueducation;
@@ -22,21 +20,16 @@ public class ApplyJob {
 	private String jujavavalid;
 	private String jujobtitle;
 	private String jucompanyname;
-	public ApplyJob() {	
+	public ApplyJob() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-	
-
-	public ApplyJob(int juid, String juname, String jumail, String jucompny, String juresume, String jurelocation,
-			String jueducation, String juexperience, String juexpinjava, String juexpjsp, String juinterviewdate,
-			String jujavavalid, String jujobtitle, String jucompanyname) {
+	public ApplyJob(int juid, String juname, String juresume, String jurelocation, String jueducation,
+			String juexperience, String juexpinjava, String juexpjsp, String juinterviewdate, String jujavavalid,
+			String jujobtitle, String jucompanyname) {
 		super();
 		this.juid = juid;
 		this.juname = juname;
-		this.jumail = jumail;
-		this.jucompny = jucompny;
 		this.juresume = juresume;
 		this.jurelocation = jurelocation;
 		this.jueducation = jueducation;
@@ -48,9 +41,6 @@ public class ApplyJob {
 		this.jujobtitle = jujobtitle;
 		this.jucompanyname = jucompanyname;
 	}
-
-
-
 	public int getJuid() {
 		return juid;
 	}
@@ -122,26 +112,6 @@ public class ApplyJob {
 	}
 	public void setJucompanyname(String jucompanyname) {
 		this.jucompanyname = jucompanyname;
-	}
-
-	public String getJumail() {
-		return jumail;
-	}
-
-	public void setJumail(String jumail) {
-		this.jumail = jumail;
-	}
-
-
-
-	public String getJucompny() {
-		return jucompny;
-	}
-
-
-
-	public void setJucompny(String jucompny) {
-		this.jucompny = jucompny;
 	}
 	
 	

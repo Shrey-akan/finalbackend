@@ -15,6 +15,8 @@ import com.jobsite.oragejobsite.entity.ApplyJob;
 import com.jobsite.oragejobsite.entity.Contact;
 import com.jobsite.oragejobsite.entity.PostJob;
 
+
+@CrossOrigin(origins="http://localhost:4200")
 @RestController
 public class ApplyController {
 	@Autowired

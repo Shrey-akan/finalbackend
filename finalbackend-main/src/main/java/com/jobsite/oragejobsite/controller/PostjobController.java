@@ -9,32 +9,32 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jobsite.oragejobsite.dao.ConatctDao;
-import com.jobsite.oragejobsite.entity.Contact;
-import com.jobsite.oragejobsite.entity.Employer;
+import com.jobsite.oragejobsite.dao.PostjobDao;
+import com.jobsite.oragejobsite.dao.UserDao;
 import com.jobsite.oragejobsite.entity.PostJob;
+import com.jobsite.oragejobsite.entity.User;
 
 
 @CrossOrigin(origins="http://localhost:4200")
 @RestController
-public class ContactController {
+public class PostjobController {
 	@Autowired
-	private ConatctDao cd;
+	private PostjobDao pjd;
 	
 	
 	@CrossOrigin(origins="http://localhost:4200")
-	@PostMapping("/insertcontact")
-	public Contact insertcontact(@RequestBody Contact contact)
+	@PostMapping("/jobpostinsert")
+	public PostJob jobpostinsert(@RequestBody PostJob pj)
 	{
-			return cd.save(contact);
+			return pjd.save(pj);
 		
 	}
 	
-	
-	
 	@CrossOrigin(origins="http://localhost:4200")
-	@GetMapping("/fetchcontact")
-	public List<Contact> fetchcontact(){
-		return cd.findAll();
+	@GetMapping("/fetchjobpost")
+	public List<PostJob> fetchjobpost(){
+		return pjd.findAll();
 	}
+	
+	
 }

@@ -14,14 +14,10 @@ import com.jobsite.oragejobsite.entity.Contact;
 import com.jobsite.oragejobsite.entity.Employer;
 import com.jobsite.oragejobsite.entity.PostJob;
 
-
-@CrossOrigin(origins="http://localhost:4200")
 @RestController
 public class ContactController {
 	@Autowired
 	private ConatctDao cd;
-	
-	
 	@CrossOrigin(origins="http://localhost:4200")
 	@PostMapping("/insertcontact")
 	public Contact insertcontact(@RequestBody Contact contact)

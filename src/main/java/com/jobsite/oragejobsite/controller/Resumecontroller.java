@@ -22,9 +22,9 @@ public class Resumecontroller {
 	
 	@CrossOrigin(origins="http://localhost:4200")
 	@PostMapping("/resumeinsert")
-	public ResumeBuilder resumeinsert(@RequestBody ResumeBuilder rmm)
+	public ResumeBuilder resumeinsert(@RequestBody ResumeBuilder resume)
 	{
-			return rm.save(rmm);
+			return rm.save(resume);
 		
 	}
 	
